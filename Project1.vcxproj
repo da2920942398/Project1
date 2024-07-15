@@ -128,7 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="add.c" />
     <ClCompile Include="test.c" />
     <ClCompile Include="语法练习.c" />
   </ItemGroup>
