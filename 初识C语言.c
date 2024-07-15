@@ -350,30 +350,30 @@
 //////////////////////////////////////16、结构体
 
 //建立结构体
-struct hmi
-{
-	int au;
-	int an;
-	char name[5];
-	char sfc[5];
-};
-
-//建立函数
-void ann(struct hmi* i)
-{
-	//
-	printf("%d  %d  %s  %s\n",(*i).an,(*i).an,(*i).name,(*i).sfc);//
-	//->
-	//结构体指针变量->成员名
-	printf("%d  %d  %s  %s\n", i->an,i->au,i->name,i->sfc);
-}
-
-
-int main()
-{
-	struct hmi tp1 = {1,1,"plc2\0","01MB\0"};
-	printf("%d\n%d\n%s\n%s\n",tp1.an,tp1.au,tp1.name,tp1.sfc);
-	ann(&tp1);
-
-	return 0;
-}
+//struct hmi
+//{
+//	int au;
+//	int an;
+//	char name[5];
+//	char sfc[5];
+//};
+//
+////建立函数
+//void ann(struct hmi* i)
+//{
+//	//
+//	printf("%d  %d  %s  %s\n",(*i).an,(*i).an,(*i).name,(*i).sfc);//
+//	//->
+//	//结构体指针变量->成员名
+//	printf("%d  %d  %s  %s\n", i->an,i->au,i->name,i->sfc);
+//}
+//
+//
+//int main()
+//{
+//	struct hmi tp1 = {1,1,"plc2\0","你好\0"};
+//	printf("%d\n%d\n%s\n%s\n",tp1.an,tp1.au,tp1.name,tp1.sfc);
+//	ann(&tp1);
+//
+//	return 0;
+//}
