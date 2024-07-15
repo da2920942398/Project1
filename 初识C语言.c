@@ -1,6 +1,7 @@
-#define  _CRT_SECURE_NO_WARNINGS 
+﻿#define  _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>//打印函数<printf>需要
-#include<string.h>//求字符串长度需要
+#include <string.h>//求字符串长度需要
+
 
 
 
@@ -82,7 +83,7 @@
 //////////////////////////////////////6、选择语句
 //int main()
 //{
-//
+//	
 //	int a=0;
 //	scanf("%d", &a);
 //	if (a == 0)
@@ -320,3 +321,59 @@
 
 
 //////////////////////////////////////15、指针
+//int main()
+//{
+//	int a = 10;
+//	int* b = &a;
+//
+//	char c = "你好";
+//	char* d = &c;
+//	  
+//	int e = 10;
+//	int* f = &e;
+//	printf("%p\n", &e);
+//	*f = 20;
+//	printf("%d\n",e);
+//
+//
+//	printf("char指针大小%zu\n",sizeof(char*));
+//	printf("short指针大小%zu\n", sizeof(short*));
+//	printf("int指针大小%zu\n",sizeof(int*));
+//	printf("long指针大小%zu\n",sizeof(long*));
+//	printf("longlong指针大小%zu\n",sizeof(long long*));
+//	printf("float指针大小%zu\n",sizeof(float*));
+//	printf("double指针大小%zu\n",sizeof(double*));
+//	return 0;
+//}
+
+
+//////////////////////////////////////16、结构体
+
+//建立结构体
+struct hmi
+{
+	int au;
+	int an;
+	char name[5];
+	char sfc[5];
+};
+
+//建立函数
+void ann(struct hmi* i)
+{
+	//
+	printf("%d  %d  %s  %s\n",(*i).an,(*i).an,(*i).name,(*i).sfc);//
+	//->
+	//结构体指针变量->成员名
+	printf("%d  %d  %s  %s\n", i->an,i->au,i->name,i->sfc);
+}
+
+
+int main()
+{
+	struct hmi tp1 = {1,1,"plc2\0","01MB\0"};
+	printf("%d\n%d\n%s\n%s\n",tp1.an,tp1.au,tp1.name,tp1.sfc);
+	ann(&tp1);
+
+	return 0;
+}
