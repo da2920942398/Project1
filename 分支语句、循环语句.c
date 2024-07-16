@@ -213,18 +213,18 @@
 //	return 0;
 //}
 
-//int main()
-//{
-//	int a[] = { 73,33,26,78,56,56,56,56 };
-//	int i = 0;
-//	int n = sizeof(a) / sizeof(a[0]);//求a这个数组里面有多少个元素（数组的总大小/数组里面单个元素的大小）
-//	while (i <= n)
-//	{
-//		printf("%c\n", a[i]);
-//		i++;
-//	}
-//	return 0;
-//}
+int main()
+{
+	int a[] = { 73,33,26,78,56,56,56,56 };
+	int i = 0;
+	int n = sizeof(a) / sizeof(a[0]);//求a这个数组里面有多少个元素（数组的总大小/数组里面单个元素的大小）
+	while (i <= n)
+	{
+		printf("%c\n", a[i]);
+		i++;
+	}
+	return 0;
+}
 
 
 //int main()
@@ -242,58 +242,9 @@
 //	return 0;
 //}
 
-
 //int main()
 //{
-//	printf("printf(\"hellow world\\n\")");
+//	int a = printf("hellow word");
+//	printf("\n%d",a);
 //	return 0;
 //}
-
-//找最大值1
-//int main()
-//{
-//	int a[4] = { 0 };
-//	int max = 0;
-//	
-//	scanf ("%d %d %d %d",&a[0],&a[1],&a[2],&a[3]);
-//	for (int i = 0; i < 4; i++)
-//		if (a[i] > max)
-//			max = a[i];
-//	printf("%d",max);
-//
-//	
-//	return 0;
-//}
-
-//找最大值2
-//int main()
-//{
-//	int max = 0;
-//	int n = 0;
-//	int i = 0;
-//	while (i < 4)
-//	{
-//		scanf("%d", &n);
-//		if (n > max)
-//			max = n;
-//		i++;
-//	}
-//		
-//	printf("%d",max);
-//
-//	return 0;
-//}
-
-
-//输入半径，求球的体积（v=4/3Πr的三次方）Π=3.1415926
-int main()
-{
-#define p 3.1415926
-	double r = 0.0;
-	double v = 0.0;
-	scanf("%lf",&r);
-	v = (4 / 3) * p * r * r * r;
-	printf("%.2lf",v);
-
-	return 0;
-}
