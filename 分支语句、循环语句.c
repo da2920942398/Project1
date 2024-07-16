@@ -213,34 +213,34 @@
 //	return 0;
 //}
 
-//int main()
-//{
-//	int a[] = { 73,33,26,78,56,56,56,56 };
-//	int i = 0;
-//	int n = sizeof(a) / sizeof(a[0]);//求a这个数组里面有多少个元素（数组的总大小/数组里面单个元素的大小）
-//	while (i <= n)
-//	{
-//		printf("%c\n", a[i]);
-//		i++;
-//	}
-//	return 0;
-//}
-
-
 int main()
 {
-	int year = 0;
-	int manth = 0;
-	int day = 0;
-	scanf("%4d%2d%2d",&year,&manth,&day);
-	printf("year=%4d\n",year);
-	printf("manth=%02d\n",manth);
-	printf("day=%02d\n", day);
-	printf("%4d年", year);
-	printf("%02d月", manth);
-	printf("%02d日\n", day);
+	int a[] = { 73,33,26,78,56,56,56,56 };
+	int i = 0;
+	int n = sizeof(a) / sizeof(a[0]);//求a这个数组里面有多少个元素（数组的总大小/数组里面单个元素的大小）
+	while (i <= n)
+	{
+		printf("%c\n", a[i]);
+		i++;
+	}
 	return 0;
 }
+
+
+//int main()
+//{
+//	int year = 0;
+//	int manth = 0;
+//	int day = 0;
+//	scanf("%4d%2d%2d",&year,&manth,&day);
+//	printf("year=%4d\n",year);
+//	printf("manth=%02d\n",manth);
+//	printf("day=%02d\n", day);
+//	printf("%4d年", year);
+//	printf("%02d月", manth);
+//	printf("%02d日\n", day);
+//	return 0;
+//}
 
 //int main()
 //{
