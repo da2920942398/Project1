@@ -80,5 +80,135 @@
 //	return 0;
 //}
 
+////////////////////////////////////////////////////switch语句
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	switch (a)
+//	{
+//	case 1:
+//		printf("星期一");
+//		break;
+//	case 2:
+//		printf("星期二");
+//		break;
+//	case 3:
+//		printf("星期三");
+//		break;
+//	case 4:
+//		printf("星期四");
+//		break;
+//	case 5:
+//		printf("星期五");
+//		break;
+//	case 6:
+//		printf("星期六");
+//		break;
+//	case 7:
+//		printf("星期天");
+//		break;	
+//	}
+//	return 0;
+//}
 
 
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d",&a);
+//	switch (a)
+//	{
+//	case 1:
+//	case 2:
+//	case 3:
+//	case 4:
+//		printf("小雨四");
+//		break;
+//	case 5:
+//	case 6:
+//	case 7:
+//		printf("大于四");
+//		break;
+//	default:
+//		printf("超出");
+//	}
+//	return 0;
+//}
+
+
+
+////////////////////////////////////////////////////while循环语句
+//int main()
+//{
+//	int a = 0;
+//	while ((a = getchar()) != EOF)
+//	{
+//		putchar(a);
+//		printf("\n");
+//	}
+//	return 0;
+//}
+//getchar:获取,每次只能提取一个字符
+//putchar:打印
+
+
+
+//////////////////////////////////////////////////////getchar、putchar语句
+//int main()
+//{
+//	char sn[6] = { 0 };
+//	printf("请输入密码：");
+//	scanf("%s",sn);
+//	//清理输入缓冲区
+//	//第一种写法（只能清一个字符）
+//	getchar();
+//	//第二种写法(一直循环清除到换行符)
+//	while ((getchar()) != '\n')
+//	{
+//	};
+//	printf("请确认密码(Y/N)");	
+//	int m = getchar();
+//	if ('Y' == m)
+//		printf("OK");
+//	else
+//		printf("NO");
+//	return 0;
+//}
+
+
+/////////////////////////////////////////////////////////////
+//int main()
+//{
+//	char a = '\n';
+//	while ((a = getchar()) != EOF)
+//	{
+//		if ((a < '0' || a > '9') && a != '\n')
+//		{
+//			printf("输入超限");
+//			//continue;
+//			//break;
+//		}
+//		else if (a == '\n')
+//			continue;
+//		else
+//		{
+//			putchar(a);
+//			printf("\n");
+//		}
+//	}
+//	return 0;
+//}
+
+/////////////////////////////////////////////////////////////只打印数字字符，跳过其他字符
+int main()
+{
+	int a = 0;
+	while ((a = getchar()) != EOF)
+	{
+		if (a < '0' || a > '9')
+			continue;
+		putchar(a);
+	}
+	return 0;
+}
