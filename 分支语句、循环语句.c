@@ -227,20 +227,20 @@
 //}
 
 
-//int main()
-//{
-//	int year = 0;
-//	int manth = 0;
-//	int day = 0;
-//	scanf("%4d%2d%2d",&year,&manth,&day);
-//	printf("year=%4d\n",year);
-//	printf("manth=%02d\n",manth);
-//	printf("day=%02d\n", day);
-//	printf("%4d年", year);
-//	printf("%02d月", manth);
-//	printf("%02d日\n", day);
-//	return 0;
-//}
+int main()
+{
+	int year = 0;
+	int manth = 0;
+	int day = 0;
+	scanf("%4d%2d%2d",&year,&manth,&day);
+	printf("year=%4d\n",year);
+	printf("manth=%02d\n",manth);
+	printf("day=%02d\n", day);
+	printf("%4d年", year);
+	printf("%02d月", manth);
+	printf("%02d日\n", day);
+	return 0;
+}
 
 //int main()
 //{
