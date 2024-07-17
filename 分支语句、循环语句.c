@@ -286,14 +286,38 @@
 
 
 //输入半径，求球的体积（v=4/3Πr的三次方）Π=3.1415926
+//int main()
+//{
+//#define p 3.1415926
+//	double r = 0.0;
+//	double v = 0.0;
+//	scanf("%lf", &r);
+//	v = (4 / 3) * p * r * r * r;
+//	printf("%.2lf", v);
+//
+//	return 0;
+//}
+
+
+////////////////////////////////////////////////////for循环语句
+//a的介乘
 int main()
 {
-#define p 3.1415926
-	double r = 0.0;
-	double v = 0.0;
-	scanf("%lf", &r);
-	v = (4 / 3) * p * r * r * r;
-	printf("%.2lf", v);
-
+	int a = 0;
+	long long b = 1;
+	while (1)
+	{
+		scanf("%d", &a);
+		if (a > 0)
+		{
+			for (int i = 1; i <= a; i++)
+				b = b * i;
+			printf("%lld\n", b);
+			b = 1;
+		}
+		else
+			break;
+	}
 	return 0;
 }
+
