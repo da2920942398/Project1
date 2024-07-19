@@ -1,6 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
-
+#include <string.h>//求字符串长度需要
 
 ////////////////////////////////////////////////////if语句
 //int main()
@@ -301,23 +301,97 @@
 
 ////////////////////////////////////////////////////for循环语句
 //a的介乘
+//int main()
+//{
+//	int a = 0;
+//	long long b = 1;
+//	while (1)
+//	{
+//		scanf("%d", &a);
+//		if (a > 0)
+//		{
+//			for (int i = 1; i <= a; i++)
+//				b = b * i;
+//			printf("%lld\n", b);
+//			b = 1;
+//		}
+//		else
+//			break;
+//	}
+//	return 0;
+//}
+
+//10以内的介乘和/第一种方法
+//int main()
+//{
+//	int a = 1;
+//	int b = 0;
+//	int i = 1;
+//	int m = 1;
+//
+//	while ( i<11)
+//	{
+//		a = 1;
+//		for ( m = 1; m <= i; m++)
+//			a = a * m;//算出当前介乘
+//		b +=a;//存储介乘
+//		i++;
+//
+//	}
+//	printf("%d",b);
+//
+//	return 0;
+//}
+////10以内的介乘和
+//int main()
+//{
+//	int a = 1;
+//	int i = 1;
+//	int b = 0;
+//	for (i = 1; i <= 10; i++)
+//	{
+//		a = a * i;//算出当前介乘并保留数值，乘下一位数得出下一位数的介乘
+//		b += a;//累计介乘和
+//	}
+//	printf("%d",b);
+//	return 0;
+//}
+
+//二分法查找
 int main()
 {
-	int a = 0;
-	long long b = 1;
-	while (1)
+	int arr[1000] = {0};
+	for (int m = 0; m < 1000; m++)
+		arr[m] = m;
+
+	int i = 0;//查找次数
+	int a = 0;//实际价格
+	scanf("%d",&a);
+
+	int lift = 0;
+	int right = (sizeof(arr)/sizeof(arr[0]) - 1);
+	int mid = 0;
+	while (lift <= right)
 	{
-		scanf("%d", &a);
-		if (a > 0)
+		i++;
+		mid = (lift + right) / 2;
+		printf("第%d次查找：\n左区=[%d]：%d\n右区间[%d]：%d\n中间值[%d]：%d\n", i, lift, arr[lift], right, arr[right], mid, arr[mid]);
+		if (a < arr[mid])
 		{
-			for (int i = 1; i <= a; i++)
-				b = b * i;
-			printf("%lld\n", b);
-			b = 1;
+			right = mid - 1;
+			printf("小于中间值\n\n");
+		}
+		else if (a > arr[mid])
+		{
+			lift = mid + 1;
+			printf("大于中间值\n\n");
 		}
 		else
 			break;
 	}
+	if (a == arr[mid])
+		printf("查找%d完成", arr[mid]);
+	else
+		printf("查找失败");
 	return 0;
 }
-
