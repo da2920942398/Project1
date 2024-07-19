@@ -374,7 +374,9 @@ int main()
 	while (lift <= right)
 	{
 		i++;
-		mid = (lift + right) / 2;
+		mid = (lift + right) / 2;//求和时会溢出!!!
+		mid = (lift / 2 + right / 2);//分开平分，防止溢出(奇数会丢失)!!!
+		mid = (lift + (right - lift) / 2);//
 		printf("第%d次查找：\n左区=[%d]：%d\n右区间[%d]：%d\n中间值[%d]：%d\n", i, lift, arr[lift], right, arr[right], mid, arr[mid]);
 		if (a < arr[mid])
 		{
