@@ -1,6 +1,7 @@
 #define  _CRT_SECURE_NO_WARNINGS 
 #include <stdio.h>
 #include <string.h>//求字符串长度需要
+#include <windows.h>
 
 ////////////////////////////////////////////////////if语句
 //int main()
@@ -357,43 +358,72 @@
 //	return 0;
 //}
 
-//二分法查找
+////二分法查找
+//int main()
+//{
+//	int arr[3000] = {0};
+//	for (int m = 0; m < 3000; m++)
+//		arr[m] = m;
+//
+//	int i = 0;//查找次数
+//	int a = 0;//实际价格
+//	scanf("%d",&a);
+//
+//	int lift = 0;
+//	int right = (sizeof(arr)/sizeof(arr[0]) - 1);
+//	int mid = 0;
+//	while (lift <= right)
+//	{
+//		i++;
+//		mid = (lift + right) / 2;//求和时会溢出!!!
+//		mid = (lift / 2 + right / 2);//分开平分，防止溢出(奇数会丢失)!!!
+//		mid = (lift + (right - lift) / 2);//
+//		printf("第%d次查找：\n左区=[%d]：%d\n右区间[%d]：%d\n中间值[%d]：%d\n", i, lift, arr[lift], right, arr[right], mid, arr[mid]);
+//		if (a < arr[mid])
+//		{
+//			right = mid - 1;
+//			printf("小于中间值\n\n");
+//		}
+//		else if (a > arr[mid])
+//		{
+//			lift = mid + 1;
+//			printf("大于中间值\n\n");
+//		}
+//		else
+//			break;
+//	}
+//	if (a == arr[mid])
+//		printf("查找%d完成", arr[mid]);
+//	else
+//		printf("查找失败");
+//	return 0;
+//}
+
+#include <windows.h>//延时Sleep函数需要用到
+#include <stdlib.h>//清空屏幕函数需要用到
+
 int main()
 {
-	int arr[1000] = {0};
-	for (int m = 0; m < 1000; m++)
-		arr[m] = m;
-
-	int i = 0;//查找次数
-	int a = 0;//实际价格
-	scanf("%d",&a);
-
+	char arr1[] = {"You cannot improve your past,but you can improve your future.Once time is wasted,life is wasted!!!"};
+	char arr2[200] = {0};
 	int lift = 0;
-	int right = (sizeof(arr)/sizeof(arr[0]) - 1);
-	int mid = 0;
-	while (lift <= right)
+	int right = (strlen(arr1) - 1);
+	printf("%d\n",(right+1));
+	for (int i = 0; (i < strlen(arr1)); i++)
+		arr2[i] = ' ';
+	arr2[(strlen(arr1))] = '\0';
+	printf("%s\n%s填充完毕\n",arr1,arr2);
+
+	while(lift <= right)
 	{
-		i++;
-		mid = (lift + right) / 2;//求和时会溢出!!!
-		mid = (lift / 2 + right / 2);//分开平分，防止溢出(奇数会丢失)!!!
-		mid = (lift + (right - lift) / 2);//
-		printf("第%d次查找：\n左区=[%d]：%d\n右区间[%d]：%d\n中间值[%d]：%d\n", i, lift, arr[lift], right, arr[right], mid, arr[mid]);
-		if (a < arr[mid])
-		{
-			right = mid - 1;
-			printf("小于中间值\n\n");
-		}
-		else if (a > arr[mid])
-		{
-			lift = mid + 1;
-			printf("大于中间值\n\n");
-		}
-		else
-			break;
+		Sleep(10);
+		arr2[lift]  = arr1[lift];
+		arr2[right] = arr1[right];
+		system("cls");
+		printf("%s\n",arr2);
+		lift++;
+		right--;
+
 	}
-	if (a == arr[mid])
-		printf("查找%d完成", arr[mid]);
-	else
-		printf("查找失败");
 	return 0;
 }
