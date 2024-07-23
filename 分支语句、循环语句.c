@@ -322,6 +322,7 @@
 //	return 0;
 //}
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //10以内的介乘和/第一种方法
 //int main()
 //{
@@ -358,7 +359,8 @@
 //	return 0;
 //}
 
-////二分法查找
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//二分法查找
 //int main()
 //{
 //	int arr[3000] = {0};
@@ -399,31 +401,64 @@
 //	return 0;
 //}
 
-#include <windows.h>//延时Sleep函数需要用到
-#include <stdlib.h>//清空屏幕函数需要用到
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// 两边向中间填充动画
+//#include <windows.h>//延时Sleep函数需要用到
+//#include <stdlib.h>//清空屏幕函数需要用到
+//
+//int main()
+//{
+//	char arr1[] = {"You cannot improve your past,but you can improve your future.Once time is wasted,life is wasted!!!"};
+//	char arr2[200] = {0};
+//	int lift = 0;
+//	int right = (strlen(arr1) - 1);
+//	printf("%d\n",(right+1));
+//	for (int i = 0; (i < strlen(arr1)); i++)
+//		arr2[i] = ' ';
+//	arr2[(strlen(arr1))] = '\0';
+//	printf("%s\n%s填充完毕\n",arr1,arr2);
+//
+//	while(lift <= right)
+//	{
+//		Sleep(10);
+//		arr2[lift]  = arr1[lift];
+//		arr2[right] = arr1[right];
+//		system("cls");
+//		printf("%s\n",arr2);
+//		lift++;
+//		right--;
+//
+//	}
+//	return 0;
+//}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//三次登录
 int main()
 {
-	char arr1[] = {"You cannot improve your past,but you can improve your future.Once time is wasted,life is wasted!!!"};
-	char arr2[200] = {0};
-	int lift = 0;
-	int right = (strlen(arr1) - 1);
-	printf("%d\n",(right+1));
-	for (int i = 0; (i < strlen(arr1)); i++)
-		arr2[i] = ' ';
-	arr2[(strlen(arr1))] = '\0';
-	printf("%s\n%s填充完毕\n",arr1,arr2);
-
-	while(lift <= right)
+	int i = 0;
+	char password[20] = { 0 };
+	for (i = 0; i < 3; i++)
 	{
-		Sleep(10);
-		arr2[lift]  = arr1[lift];
-		arr2[right] = arr1[right];
+		printf("请输入密码:>");
+		scanf("%s",password);
+		if (strcmp(password, "bujian2920") == 0)
+		{
+			system("cls");
+			printf("登陆成功");
+			break;
+		}
+		else if (i < 2)
+			system("cls");
+			printf("密码错误，请输入正确密码:>");
+	}
+	if (i >= 3)
+	{
 		system("cls");
-		printf("%s\n",arr2);
-		lift++;
-		right--;
-
+		printf("登录失败");
 	}
 	return 0;
+
 }
